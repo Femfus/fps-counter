@@ -1,7 +1,8 @@
 
 # Simple FPS Counter for Roblox
 
-This script provides a smooth FPS (frames per second) counter that displays the current FPS on-screen in Roblox. It updates the FPS counter every second and includes a smooth fade transition for better visual appeal.
+This is a simple fps counter for any roblox project feel free to use no credit needed
+feel free to paste this script if you want i just felt like being productive today
 
 ## Features
 - Displays FPS in the top-left corner.
