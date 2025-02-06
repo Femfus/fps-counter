@@ -1,4 +1,4 @@
-![RobloxStudioBeta_7ErFIFDdOd-ezgif com-optimize](https://github.com/user-attachments/assets/165c806b-34a1-4f35-9e74-b8cf18ed4396)
+
 # Simple FPS Counter for Roblox
 
 This is a simple fps counter for any roblox project feel free to use no credit needed
@@ -10,6 +10,7 @@ feel free to paste this script if you want i just felt like being productive tod
 - Lightweight and non-intrusive.
 - Easy to integrate into any Roblox game.
 
+
 ## Setup Guide
 
 1. make a screen gui
@@ -19,3 +20,6 @@ feel free to paste this script if you want i just felt like being productive tod
 5. paste source into "localscript"
 6. place the text label into the center of the frame
 7. Enjoy the FPS counter :P
+
+
+![RobloxStudioBeta_7ErFIFDdOd-ezgif com-optimize](https://github.com/user-attachments/assets/165c806b-34a1-4f35-9e74-b8cf18ed4396)
