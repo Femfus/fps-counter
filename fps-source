@@ -1,0 +1,42 @@
+local RunService = game:GetService("RunService")
+local tweenService = game:GetService("TweenService")
+local textLabel = script.Parent:WaitForChild("Frame"):WaitForChild("TextLabel")
+
+local lastTime = tick()
+local frameCount = 0
+local currentFPS = 0
+
+-- Tween info for smooth transition
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut)
+
+RunService.RenderStepped:Connect(function()
+	frameCount += 1
+	local currentTime = tick()
+	if currentTime - lastTime >= 1 then
+		local fps = math.floor(frameCount / (currentTime - lastTime) + 0.5)
+
+		-- update if fps changes in game
+		if fps ~= currentFPS then
+			local targetText = "FPS: " .. fps
+
+			-- Text fade out
+			local fadeOutTween = tweenService:Create(textLabel, tweenInfo, {TextTransparency = 1})
+			fadeOutTween:Play()
+			fadeOutTween.Completed:Connect(function()
+				-- Text fade in
+				textLabel.Text = targetText
+				local fadeInTween = tweenService:Create(textLabel, tweenInfo, {TextTransparency = 0})
+				fadeInTween:Play()
+			end)
+		end
+
+		lastTime = currentTime
+		frameCount = 0
+		currentFPS = fps
+	end
+end)
+
+
+
+-- Made by femfus on github
+-- https://github.com/Femfus
